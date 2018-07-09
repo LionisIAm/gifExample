@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import java.util.List;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class GifSliderAdapter extends PagerAdapter {
 
     private Context mContext;
@@ -24,7 +26,8 @@ public class GifSliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {
         ViewGroup imageLayout = (ViewGroup) inflater.inflate(R.layout.gif_item, collection, false);
-        ((ImageView) imageLayout.findViewById(R.id.imageView)).setImageResource(gifs.get(position));
+        GifImageView gif = imageLayout.findViewById(R.id.imageView);
+        gif.setImageResource(gifs.get(position));
         collection.addView(imageLayout);
         return imageLayout;
     }

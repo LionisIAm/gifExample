@@ -22,9 +22,8 @@ public class MainActivity extends AppCompatActivity {
         indicator = findViewById(R.id.indicator);
 
         List<Integer> gifs = new ArrayList<>();
-        gifs.add(R.drawable.test);
-        gifs.add(R.drawable.test);
-        gifs.add(R.drawable.test);
+        gifs.add(R.drawable.anim);
+        gifs.add(R.drawable.anim2);
 
         viewPager.setAdapter(new GifSliderAdapter(this, gifs));
         indicator.attachToPager(viewPager);
